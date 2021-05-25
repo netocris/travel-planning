@@ -1,7 +1,20 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div class="container py-3">
+    <header>
+      <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+          <span class="fs-4">{{ $t("title") }}</span>
+        </a>
+        <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+          <router-link to="/" class="me-3 py-2 text-dark text-decoration-none">
+            Home
+          </router-link>
+          <router-link to="/about" class="py-2 text-dark text-decoration-none">
+            About
+          </router-link>
+        </nav>
+      </div>
+    </header>
   </div>
   <router-view />
 </template>
